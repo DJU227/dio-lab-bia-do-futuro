@@ -1,42 +1,37 @@
 [
-  {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
-  },
-  {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
-  },
-  {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
-  },
-  {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
-  },
-  {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
-  }
+{
+"nome": "Combustível",
+"categoria": "custo_variavel",
+"descricao": "Gastos com gasolina, etanol ou outro combustível utilizado durante o trabalho",
+"impacto": "alto",
+"recomendacao": "Monitorar o custo por dia e comparar com o faturamento"
+},
+{
+"nome": "Manutenção",
+"categoria": "custo_operacional",
+"descricao": "Gastos e reservas destinados à manutenção do veículo",
+"impacto": "medio",
+"recomendacao": "Reservar mensalmente parte do faturamento para manutenção preventiva"
+},
+{
+"nome": "Alimentação",
+"categoria": "custo_operacional",
+"descricao": "Gastos com alimentação durante a jornada de trabalho",
+"impacto": "baixo",
+"recomendacao": "Acompanhar gastos para evitar impacto excessivo no lucro diário"
+},
+{
+"nome": "Lucro por Hora",
+"categoria": "indicador",
+"descricao": "Lucro líquido dividido pela quantidade de horas trabalhadas",
+"impacto": "alto",
+"recomendacao": "Utilizar para comparar a rentabilidade entre diferentes jornadas"
+},
+{
+"nome": "Meta Financeira",
+"categoria": "planejamento",
+"descricao": "Valor de lucro que o entregador deseja alcançar em determinado período",
+"impacto": "alto",
+"recomendacao": "Acompanhar diariamente o progresso em relação à meta definida"
+}
 ]
