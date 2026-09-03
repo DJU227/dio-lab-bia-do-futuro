@@ -1,4 +1,5 @@
-data,descricao,categoria,valor,tipo 2026-08-01,Entregas iFood,faturamento,215.00,entrada
+data,descricao,categoria,valor,tipo 
+2026-08-01,Entregas iFood,faturamento,215.00,entrada
 2026-08-01,Combustível,combustivel,42.00,saida 2026-08-01,Almoço,alimentacao,25.00,saida 
 2026-08-02,Entregas 99,faturamento,185.00,entrada 
 2026-08-02,Combustível,combustivel,38.00,saida 
