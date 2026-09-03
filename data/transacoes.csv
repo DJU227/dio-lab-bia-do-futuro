@@ -1,13 +1,1 @@
-data,descricao,categoria,valor,tipo 
-2026-08-01,Entregas iFood,faturamento,215.00,entrada
-2026-08-01,Combustível,combustivel,42.00,saida 2026-08-01,Almoço,alimentacao,25.00,saida 
-2026-08-02,Entregas 99,faturamento,185.00,entrada 
-2026-08-02,Combustível,combustivel,38.00,saida 
-2026-08-03,Entregas iFood,faturamento,260.00,entrada 
-2026-08-03,Combustível,combustivel,45.00,saida 
-2026-08-03,Troca de óleo,manutencao,80.00,saida 
-2026-08-04,Entregas iFood,faturamento,230.00,entrada 
-2026-08-04,Combustível,combustivel,40.00,saida 
-2026-08-04,Lanche,alimentacao,18.00,saida 
-2026-08-05,Entregas 99,faturamento,195.00,entrada 
-2026-08-05,Combustível,combustivel,37.00,saida
+data,descricao,categoria,valor,tipo 2026-08-01,"Entregas iFood",faturamento,215.00,entrada 2026-08-01,"Combustível",combustivel,42.00,saida 2026-08-01,"Almoço",alimentacao,25.00,saida 2026-08-02,"Entregas 99",faturamento,185.00,entrada 2026-08-02,"Combustível",combustivel,38.00,saida 2026-08-03,"Entregas iFood",faturamento,260.00,entrada 2026-08-03,"Combustível",combustivel,45.00,saida 2026-08-03,"Troca de óleo",manutencao,80.00,saida 2026-08-04,"Entregas iFood",faturamento,230.00,entrada 2026-08-04,"Combustível",combustivel,40.00,saida 2026-08-04,"Lanche",alimentacao,18.00,saida 2026-08-05,"Entregas 99",faturamento,195.00,entrada 2026-08-05,"Combustível",combustivel,37.00,saida
