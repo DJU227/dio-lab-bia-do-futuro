@@ -1,23 +1,28 @@
 {
-  "nome": "João Silva",
-  "idade": 32,
-  "profissao": "Analista de Sistemas",
-  "renda_mensal": 5000.00,
-  "perfil_investidor": "moderado",
-  "objetivo_principal": "Construir reserva de emergência",
-  "patrimonio_total": 15000.00,
-  "reserva_emergencia_atual": 10000.00,
-  "aceita_risco": false,
-  "metas": [
-    {
-      "meta": "Completar reserva de emergência",
-      "valor_necessario": 15000.00,
-      "prazo": "2026-06"
-    },
-    {
-      "meta": "Entrada do apartamento",
-      "valor_necessario": 50000.00,
-      "prazo": "2027-12"
-    }
-  ]
+"nome": "Carlos Oliveira",
+"idade": 29,
+"profissao": "Entregador de aplicativo",
+"veiculo": "Motocicleta",
+"plataformas": [
+"iFood",
+"99"
+],
+"renda_media_mensal": 4200.00,
+"horas_trabalhadas_semana": 45,
+"meta_lucro_mensal": 3500.00,
+"custo_medio_combustivel_mensal": 850.00,
+"reserva_manutencao_mensal": 250.00,
+"objetivo_principal": "Aumentar o lucro líquido mensal",
+"metas": [
+{
+"meta": "Obter lucro líquido de R$ 3500 no mês",
+"valor_necessario": 3500.00,
+"prazo": "2026-09"
+},
+{
+"meta": "Criar reserva para manutenção da motocicleta",
+"valor_necessario": 1500.00,
+"prazo": "2026-12"
+}
+]
 }
