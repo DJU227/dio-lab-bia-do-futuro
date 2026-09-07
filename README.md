@@ -111,31 +111,79 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 ## Estrutura do Repositório
 
 ```
-📁 lab-agente-financeiro/
+# Estrutura do Projeto
+
+```text
+📁 Rota$/
 │
 ├── 📄 README.md
 │
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
+├── 📁 data/                              # Dados utilizados pelo agente
+│   ├── 📄 historico_atendimento.csv      # Histórico de atendimentos
+│   ├── 📄 perfil_investidor.json         # Perfil do entregador
+│   ├── 📄 produtos_financeiros.json      # Categorias e indicadores financeiros
+│   └── 📄 transacoes.csv                 # Histórico de ganhos e despesas
 │
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
+├── 📁 docs/                              # Documentação do projeto
+│   ├── 📄 01-caso-de-uso.md              # Caso de uso do agente
+│   ├── 📄 02-base-conhecimento.md        # Base de conhecimento e dados
+│   └── 📄 03-prompts.md                  # Engenharia de prompts
 │
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
+├── 📁 src/                               # Código-fonte da aplicação
+│   ├── 📄 app.py                         # Interface web desenvolvida com Streamlit
+│   ├── 📄 agente.py                      # Lógica e funcionamento do agente financeiro
+│   ├── 📄 config.py                      # Configurações e chave da API Gemini
+│   └── 📄 requirements.txt               # Dependências do projeto
 │
-├── 📁 assets/                        # Imagens e diagramas
+├── 📁 assets/                             # Imagens, diagramas e recursos visuais
 │   └── ...
 │
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+└── 📁 examples/                           # Exemplos de utilização
+    └── 📄 README.md
+```
+
+## Descrição das Principais Pastas
+
+### 📁 `data/`
+
+Armazena os dados utilizados pelo agente financeiro para realizar análises e fornecer respostas contextualizadas.
+
+* `historico_atendimento.csv` — histórico das interações e dúvidas dos usuários.
+* `perfil_investidor.json` — informações do perfil do entregador, como veículo, plataformas utilizadas, renda média e metas.
+* `produtos_financeiros.json` — categorias de despesas e indicadores utilizados pelo agente.
+* `transacoes.csv` — registros de faturamento, despesas e demais movimentações financeiras.
+
+### 📁 `docs/`
+
+Contém a documentação técnica e conceitual do projeto.
+
+* `01-caso-de-uso.md` — apresenta o problema, público-alvo, objetivo e funcionamento do agente.
+* `02-base-conhecimento.md` — descreve os dados utilizados como contexto para o agente.
+* `03-prompts.md` — apresenta as estratégias e instruções utilizadas na engenharia de prompts.
+
+### 📁 `src/`
+
+Contém o código responsável pelo funcionamento da aplicação.
+
+* `app.py` — executa a interface do Rota$ utilizando Streamlit.
+* `agente.py` — realiza o processamento das mensagens, consultas financeiras, registros de transações e integração com a IA Gemini.
+* `config.py` — centraliza as configurações da API e do modelo utilizado.
+* `requirements.txt` — lista as bibliotecas necessárias para executar o projeto.
+
+### 📁 `assets/`
+
+Armazena recursos visuais utilizados na documentação, como:
+
+* Logos;
+* Diagramas;
+* Capturas de tela;
+* Fluxogramas;
+* Imagens da aplicação.
+
+### 📁 `examples/`
+
+Contém exemplos de utilização do agente, consultas realizadas e outros materiais de referência.
+
 ```
 
 ---
