@@ -109,7 +109,7 @@ O Rota$ transforma uma pergunta simples como "quanto eu ganhei hoje?" em uma vis
 ## Link do Vídeo
 
 
-https://drive.google.com/file/d/16nBkIBvjTbiE_9eXn04WyuBCrX5lYaYK/view?usp=sharing
+[https://drive.google.com/file/d/16nBkIBvjTbiE_9eXn04WyuBCrX5lYaYK/view?usp=sharing](https://drive.google.com/file/d/1vnr2-VFMazHDCSNtY22DeNnRHGz95f11/view?usp=sharing)
 
 
 [Link do vídeo]
