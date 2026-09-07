@@ -1,117 +1,215 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 💰 Rota$ — Agente Financeiro Inteligente para Entregadores
 
-## Contexto
+## 📌 Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+O **Rota$** é um agente financeiro desenvolvido com **Inteligência Artificial Generativa** para auxiliar trabalhadores autônomos de plataformas de delivery, como iFood e 99, no controle de sua vida financeira.
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+Entregadores geralmente acompanham apenas o valor recebido pelas entregas, sem considerar adequadamente despesas como combustível, alimentação e manutenção do veículo. Isso dificulta a identificação do **lucro real** obtido durante a jornada de trabalho.
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+O Rota$ foi desenvolvido para transformar esses dados em informações financeiras simples e úteis.
 
----
+### 🎯 Problema
 
-## O Que Você Deve Entregar
+Um entregador pode, por exemplo, faturar R$ 250 em um dia e considerar que esse foi seu ganho. Porém, após descontar combustível, alimentação e outros custos operacionais, o lucro efetivo pode ser significativamente menor.
 
-### 1. Documentação do Agente
+O agente busca responder perguntas como:
 
-Defina **o que** seu agente faz e **como** ele funciona:
+* Quanto eu faturei?
+* Quanto eu gastei?
+* Quanto foi meu lucro?
+* Quanto gastei com combustível?
+* Qual é minha meta de lucro?
+* Como estão meus gastos?
+* Estou aumentando ou reduzindo meus custos?
+* Qual é minha rentabilidade?
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+### 💡 Solução
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+O Rota$ combina **processamento de linguagem natural, dados estruturados e IA Generativa** para permitir que o entregador registre e consulte suas informações financeiras utilizando linguagem simples e natural.
 
----
+Exemplo:
 
-### 2. Base de Conhecimento
+> **Usuário:** Hoje fiz R$ 280 em entregas.
+>
+> **Rota$:** Perfeito! Registrei R$ 280,00 de ganhos no dia de hoje.
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Outro exemplo:
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+> **Usuário:** Gastei R$ 40 de combustível.
+>
+> **Rota$:** Registrado! Adicionei uma despesa de R$ 40,00 em combustível.
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+A partir desses registros, o sistema atualiza os cálculos financeiros e disponibiliza essas informações para consultas e análises.
 
 ---
 
-### 3. Prompts do Agente
+# 🤖 Funcionalidades do Agente
 
-Documente os prompts que definem o comportamento do seu agente:
+O Rota$ possui as seguintes funcionalidades principais:
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+### 💰 Controle de ganhos
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+Permite registrar valores recebidos pelas entregas e acompanhar o faturamento acumulado.
 
----
+### 💸 Controle de despesas
 
-### 4. Aplicação Funcional
+Permite registrar gastos relacionados à atividade profissional, incluindo:
 
-Desenvolva um **protótipo funcional** do seu agente:
+* Combustível;
+* Alimentação;
+* Manutenção;
+* Outras despesas.
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+### 📊 Cálculo de lucro
 
-📁 **Pasta:** [`src/`](./src/)
+O agente calcula o lucro estimado considerando:
 
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
-
+```text
+Lucro = Faturamento - Despesas
 ```
-# Estrutura do Projeto
+
+### ⛽ Controle de combustível
+
+Permite acompanhar os gastos com combustível e identificar seu impacto sobre o faturamento.
+
+### 🔧 Controle de manutenção
+
+Permite acompanhar despesas e reservas destinadas à manutenção do veículo utilizado para realizar as entregas.
+
+### 🎯 Metas financeiras
+
+O perfil do entregador possui metas financeiras que podem ser consultadas pelo agente.
+
+Exemplo:
+
+> "Qual é minha meta de lucro mensal?"
+
+### 🧠 Análise com IA Generativa
+
+Perguntas mais complexas são encaminhadas para o modelo de IA, que utiliza como contexto:
+
+* Perfil do entregador;
+* Histórico de transações;
+* Histórico de atendimentos;
+* Categorias financeiras;
+* Indicadores financeiros;
+* Regras de comportamento do agente.
+
+---
+
+# 👤 Público-Alvo
+
+O público-alvo principal do Rota$ é formado por **trabalhadores autônomos de plataformas de delivery**, principalmente:
+
+* Entregadores de motocicleta;
+* Entregadores de carro;
+* Trabalhadores que utilizam iFood;
+* Trabalhadores que utilizam 99;
+* Profissionais com renda variável;
+* Pessoas que precisam acompanhar custos e lucro da atividade de entrega.
+
+O sistema foi projetado para usuários que podem não possuir conhecimento aprofundado em educação financeira.
+
+Por isso, o agente utiliza uma comunicação **simples, objetiva, prática e educativa**.
+
+---
+
+# 🧠 Persona do Agente
+
+O agente possui o nome **Rota$**.
+
+### Características
+
+* **Personalidade:** consultiva e prática;
+* **Tom:** informal, acessível e profissional;
+* **Objetivo:** ajudar o entregador a compreender sua situação financeira;
+* **Comunicação:** clara e direta;
+* **Foco:** ganhos, despesas, lucro, metas e rentabilidade.
+
+O agente não atua como banco e não fornece recomendações personalizadas de investimentos.
+
+---
+
+# 📚 Base de Conhecimento
+
+Os dados utilizados pelo agente estão armazenados na pasta [`data/`](./data/).
+
+| Arquivo                     | Formato | Utilização                                     |
+| --------------------------- | ------- | ---------------------------------------------- |
+| `transacoes.csv`            | CSV     | Histórico de ganhos e despesas                 |
+| `historico_atendimento.csv` | CSV     | Histórico de atendimentos anteriores           |
+| `perfil_investidor.json`    | JSON    | Perfil, características e metas do entregador  |
+| `produtos_financeiros.json` | JSON    | Categorias de custos e indicadores financeiros |
+
+Os arquivos utilizam dados mockados para permitir o desenvolvimento e a avaliação do agente sem utilização de informações financeiras reais.
+
+📄 **Documentação:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+
+---
+
+# 🏗️ Arquitetura da Aplicação
+
+O projeto utiliza uma arquitetura simples composta por uma interface web, uma camada de processamento do agente e uma integração com IA Generativa.
+
+```text
+                    ┌──────────────────────┐
+                    │      Usuário         │
+                    │    Entregador        │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │     Streamlit        │
+                    │       app.py         │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │       agente.py      │
+                    │                      │
+                    │ Processamento das    │
+                    │ mensagens e regras   │
+                    └───────┬───────┬──────┘
+                            │       │
+                 ┌──────────┘       └──────────┐
+                 ▼                             ▼
+        ┌──────────────────┐          ┌──────────────────┐
+        │ Dados locais     │          │ Google Gemini    │
+        │                  │          │                  │
+        │ CSV / JSON       │          │ IA Generativa    │
+        └──────────────────┘          └──────────────────┘
+```
+
+O processamento local é utilizado para operações simples e determinísticas, como consulta de faturamento, despesas e lucro.
+
+Perguntas mais complexas são encaminhadas ao modelo Gemini utilizando os dados financeiros como contexto.
+
+---
+
+# 🔐 Segurança e Confiabilidade
+
+Por se tratar de uma aplicação relacionada a informações financeiras, o Rota$ possui regras para reduzir respostas incorretas ou inventadas.
+
+Entre as principais regras estão:
+
+* Utilizar os dados fornecidos pela aplicação;
+* Não inventar valores;
+* Não inventar transações;
+* Não inventar datas;
+* Diferenciar dados registrados de estimativas;
+* Não inventar horas trabalhadas;
+* Só calcular lucro por hora quando existirem horas correspondentes;
+* Não solicitar senhas ou credenciais;
+* Não fornecer informações de outros usuários;
+* Não fornecer recomendações personalizadas de investimentos.
+
+A aplicação também utiliza consultas locais para cálculos financeiros básicos, reduzindo a dependência da IA para operações matemáticas determinísticas.
+
+📄 **Documentação:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+
+---
+
+# 📁 Estrutura do Projeto
 
 ```text
 📁 Rota$/
@@ -132,7 +230,7 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 ├── 📁 src/                               # Código-fonte da aplicação
 │   ├── 📄 app.py                         # Interface web desenvolvida com Streamlit
 │   ├── 📄 agente.py                      # Lógica e funcionamento do agente financeiro
-│   ├── 📄 config.py                      # Configurações e chave da API Gemini
+│   ├── 📄 config.py                      # Configurações e integração com a API Gemini
 │   └── 📄 requirements.txt               # Dependências do projeto
 │
 ├── 📁 assets/                             # Imagens, diagramas e recursos visuais
@@ -142,56 +240,297 @@ Todas as ferramentas abaixo possuem versões gratuitas:
     └── 📄 README.md
 ```
 
-## Descrição das Principais Pastas
+---
 
-### 📁 `data/`
+# 📂 Descrição dos Diretórios
 
-Armazena os dados utilizados pelo agente financeiro para realizar análises e fornecer respostas contextualizadas.
+## `data/`
 
-* `historico_atendimento.csv` — histórico das interações e dúvidas dos usuários.
-* `perfil_investidor.json` — informações do perfil do entregador, como veículo, plataformas utilizadas, renda média e metas.
-* `produtos_financeiros.json` — categorias de despesas e indicadores utilizados pelo agente.
-* `transacoes.csv` — registros de faturamento, despesas e demais movimentações financeiras.
+Armazena os dados utilizados pelo agente.
 
-### 📁 `docs/`
+### `transacoes.csv`
 
-Contém a documentação técnica e conceitual do projeto.
+Contém os registros financeiros do entregador, incluindo:
 
-* `01-caso-de-uso.md` — apresenta o problema, público-alvo, objetivo e funcionamento do agente.
-* `02-base-conhecimento.md` — descreve os dados utilizados como contexto para o agente.
-* `03-prompts.md` — apresenta as estratégias e instruções utilizadas na engenharia de prompts.
+* Data;
+* Descrição;
+* Categoria;
+* Valor;
+* Tipo da movimentação.
 
-### 📁 `src/`
+As movimentações podem ser classificadas como:
 
-Contém o código responsável pelo funcionamento da aplicação.
-
-* `app.py` — executa a interface do Rota$ utilizando Streamlit.
-* `agente.py` — realiza o processamento das mensagens, consultas financeiras, registros de transações e integração com a IA Gemini.
-* `config.py` — centraliza as configurações da API e do modelo utilizado.
-* `requirements.txt` — lista as bibliotecas necessárias para executar o projeto.
-
-### 📁 `assets/`
-
-Armazena recursos visuais utilizados na documentação, como:
-
-* Logos;
-* Diagramas;
-* Capturas de tela;
-* Fluxogramas;
-* Imagens da aplicação.
-
-### 📁 `examples/`
-
-Contém exemplos de utilização do agente, consultas realizadas e outros materiais de referência.
-
+```text
+entrada
+saida
 ```
+
+### `historico_atendimento.csv`
+
+Armazena exemplos de atendimentos anteriores para fornecer contexto ao agente.
+
+### `perfil_investidor.json`
+
+Apesar do nome original do arquivo, neste projeto ele representa o **perfil financeiro do entregador**.
+
+São armazenadas informações como:
+
+* Nome;
+* Profissão;
+* Veículo;
+* Plataformas utilizadas;
+* Renda média;
+* Horas trabalhadas;
+* Meta de lucro;
+* Custo médio de combustível;
+* Reserva para manutenção;
+* Objetivos financeiros.
+
+### `produtos_financeiros.json`
+
+Neste projeto, o arquivo foi adaptado para representar **categorias de custos e indicadores financeiros relevantes para entregadores**.
 
 ---
 
-## Dicas Finais
+# 💻 Código da Aplicação
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+A aplicação está localizada na pasta [`src/`](./src/).
+
+### `app.py`
+
+Responsável pela interface do Rota$ utilizando o framework Streamlit.
+
+### `agente.py`
+
+Responsável pela lógica principal do agente, incluindo:
+
+* Leitura dos dados;
+* Processamento das mensagens;
+* Identificação de ganhos;
+* Identificação de despesas;
+* Registro de transações;
+* Cálculos financeiros;
+* Consultas locais;
+* Montagem do contexto;
+* Integração com o Gemini.
+
+### `config.py`
+
+Centraliza as configurações utilizadas pela aplicação, incluindo a chave da API e o modelo Gemini utilizado.
+
+### `requirements.txt`
+
+Contém as dependências necessárias para executar o projeto.
+
+---
+
+# ⚙️ Tecnologias Utilizadas
+
+| Tecnologia           | Utilização                               |
+| -------------------- | ---------------------------------------- |
+| **Python**           | Linguagem principal                      |
+| **Streamlit**        | Interface web                            |
+| **Pandas**           | Manipulação dos dados financeiros        |
+| **Google Gemini**    | Inteligência Artificial Generativa       |
+| **Google GenAI SDK** | Integração com o Gemini                  |
+| **JSON**             | Armazenamento de dados estruturados      |
+| **CSV**              | Armazenamento das transações e histórico |
+| **python-dotenv**    | Gerenciamento de variáveis de ambiente   |
+
+---
+
+# 🚀 Como Executar
+
+## 1. Clonar o repositório
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+```
+
+## 2. Acessar a pasta do projeto
+
+```bash
+cd "Rota$"
+```
+
+## 3. Criar o ambiente virtual
+
+No Windows:
+
+```powershell
+python -m venv .venv
+```
+
+## 4. Ativar o ambiente virtual
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+## 5. Instalar as dependências
+
+```powershell
+pip install -r src\requirements.txt
+```
+
+## 6. Configurar a API Gemini
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+GEMINI_API_KEY=sua_chave_do_gemini
+```
+
+> ⚠️ **Importante:** nunca publique sua chave da API no GitHub.
+
+## 7. Executar a aplicação
+
+```powershell
+python -m streamlit run src\app.py
+```
+
+Após a execução, o Streamlit abrirá a aplicação no navegador.
+
+---
+
+# 🧪 Exemplos de Utilização
+
+### Registrar um ganho
+
+```text
+Hoje fiz R$ 280 em entregas
+```
+
+O sistema registra automaticamente uma entrada de:
+
+```text
+Valor: R$ 280,00
+Categoria: faturamento
+Tipo: entrada
+```
+
+### Registrar combustível
+
+```text
+Gastei R$ 40 de combustível
+```
+
+O sistema registra:
+
+```text
+Valor: R$ 40,00
+Categoria: combustível
+Tipo: saída
+```
+
+### Consultar o lucro
+
+```text
+Quanto lucrei?
+```
+
+O agente calcula:
+
+```text
+Lucro = Faturamento - Despesas
+```
+
+### Consultar uma meta
+
+```text
+Qual é minha meta de lucro?
+```
+
+O agente consulta o perfil financeiro do entregador.
+
+### Pergunta analítica
+
+```text
+Como estão meus gastos com combustível?
+```
+
+Nesse tipo de consulta, o agente pode utilizar os dados financeiros disponíveis para produzir uma análise contextualizada.
+
+---
+
+# 📊 Fluxo Financeiro
+
+O funcionamento principal do Rota$ pode ser representado pelo seguinte fluxo:
+
+```text
+Ganhos
+   │
+   ▼
+Despesas
+   │
+   ▼
+Lucro
+   │
+   ▼
+Rentabilidade
+   │
+   ▼
+Metas
+   │
+   ▼
+Recomendações e análises da IA
+```
+
+O objetivo é transformar registros financeiros simples em informações que auxiliem o entregador na tomada de decisões sobre sua atividade profissional.
+
+---
+
+# 📈 Avaliação e Métricas
+
+A qualidade do agente pode ser avaliada considerando:
+
+* **Precisão dos cálculos financeiros;**
+* **Assertividade das respostas;**
+* **Consistência com os dados armazenados;**
+* **Taxa de respostas sem informações inventadas;**
+* **Coerência com o perfil do entregador;**
+* **Capacidade de identificar corretamente ganhos e despesas;**
+* **Qualidade das análises geradas pela IA.**
+
+📄 **Documentação:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+
+---
+
+# 🎤 Pitch
+
+O Rota$ pode ser apresentado como uma solução que utiliza Inteligência Artificial para transformar o controle financeiro de entregadores.
+
+A proposta central é simples:
+
+> **O entregador registra seus ganhos e gastos em linguagem natural, e o Rota$ transforma essas informações em uma visão clara do seu lucro e da sua situação financeira.**
+
+📄 **Roteiro do pitch:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+
+---
+
+# 🎯 Objetivo do Projeto
+
+O principal objetivo do Rota$ é **facilitar o controle financeiro de trabalhadores de delivery**, permitindo que eles compreendam não apenas quanto faturam, mas principalmente **quanto realmente lucram após os custos da atividade**.
+
+A aplicação busca aproximar conceitos de educação financeira da rotina do entregador por meio de uma interface conversacional simples e acessível.
+
+---
+
+# 📌 Dicas para Utilização
+
+1. **Registre seus ganhos** sempre que possível.
+2. **Registre todas as despesas** relacionadas ao trabalho.
+3. **Acompanhe o lucro**, e não apenas o faturamento.
+4. **Monitore o combustível**, pois representa um dos principais custos operacionais.
+5. **Reserve valores para manutenção** do veículo.
+6. **Defina metas financeiras** e acompanhe sua evolução.
+7. **Utilize a IA para análises**, mas considere sempre os dados registrados como base das informações.
+8. **Não compartilhe chaves de API ou credenciais** no repositório.
+
+---
+
+## 👨‍💻 Projeto
+
+**Rota$ — Agente Financeiro Inteligente para Entregadores**
+
+Projeto acadêmico desenvolvido com Python, Streamlit, Pandas e Google Gemini, com foco na aplicação prática de **IA Generativa, processamento de dados e educação financeira**.
